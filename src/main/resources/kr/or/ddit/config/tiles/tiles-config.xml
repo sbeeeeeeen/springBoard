@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="basicLayout" template="/WEB-INF/views/basicLayout.jsp">
+		<put-attribute name="top" value="/WEB-INF/views/common/top.jsp"/>
+		<put-attribute name="left" value="/WEB-INF/views/common/left.jsp"/>
+		<put-attribute name="content"/>
+	</definition>
+	
+	<definition name="main" extends="basicLayout">
+		<put-attribute name="content" value="/WEB-INF/views/main/main.jsp"/>
+	</definition>
+	
+	<definition name="createBoard" extends="basicLayout">
+		<put-attribute name="content" value="/WEB-INF/views/board/createBoard.jsp"/>
+	</definition>
+	
+	<definition name="viewBoard" extends="basicLayout">
+		<put-attribute name="content" value="/WEB-INF/views/board/viewBoard.jsp"/>
+	</definition>
+	
+	<definition name="postsWrite" extends="basicLayout">
+		<put-attribute name="content" value="/WEB-INF/views/posts/postsWrite.jsp"/>
+	</definition>
+	
+	<definition name="postsDetail" extends="basicLayout">
+		<put-attribute name="content" value="/WEB-INF/views/posts/postsDetail.jsp"/>
+	</definition>
+	
+	<definition name="postsEdit" extends="basicLayout">
+		<put-attribute name="content" value="/WEB-INF/views/posts/postsWrite.jsp"/>
+	</definition>
+	
+</tiles-definitions>
